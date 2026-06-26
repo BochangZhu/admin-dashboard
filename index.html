@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -52,17 +53,38 @@
             </div>
         </div>
     </div>
+
     <div class="header">
-        <div class="upper-header"></div>
-        <div class="lower-header"></div>
+        <div class="top-left">
+            <label for="search-bar" class="search-icon">
+                <svg class="search-icon">
+                </svg>
+            </label>
+            <input type="text" id="search-bar" name="search">
+        </div>
+        <div class="top-right">
+            <svg class="notification-icon"></svg>
+            <img src="./asset/img_avatar.png" alt="avatar" class="avatar" width="30" height="30">
+            <p>Micky Robert</p>
+        </div>
+        <div class="bottom-left">
+            <img src="./asset/img_avatar.png" alt="avatar" class="avatar-L" width="60" height="60">
+            <p>Hi there,</p>
+            <p>Micky Robert (@micky)</p>
+        </div>
+        <div class="bottom-right">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+        </div>
     </div>
+
     <div class="main">
         <div class="left-main"></div>
         <div class="right-main">
             <div class="announcement"></div>
             <div class="trending"></div>
         </div>
-    </div>
-    
+    </div> 
 </body>
 </html>

@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    border: 2px solid black;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr 4fr;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}
+.sidebar {
+    padding: 10px;
+    border: 2px solid blue;
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    .dashboard{
+        align-items: center;
+        display: flex;
+        gap: 5%;
+    }
+    &>div:not(.dashboard) {
+        border: 1px solid pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        div {
+            border: 1px solid red;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 5%;
+        }
+    }
+}
+
+
+.header {
+
+}
+
