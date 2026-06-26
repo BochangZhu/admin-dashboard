@@ -1,11 +1,12 @@
 
 
 body {
+    font-family: "Google Sans", system-ui, -apple-system, 'Segoe UI';
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     border: 2px solid black;
     display: grid;
-    grid-template: 1fr 3fr / 1fr 3.5fr;
+    grid-template: 1fr 5fr / 1fr 3.5fr;
 }
 
 
@@ -62,61 +63,72 @@ svg {
         &>* {
             border: 1px dashed red;
         }
-        align-self: start;
+        align-self: stretch;
 
-        display: grid;
-        justify-items: end;
+        display: flex;
         align-items: center;
-        column-gap: 5%;
-        grid-template: 1fr / 6fr 1fr 2fr;
-        p:last-child {
-            justify-self: end;
-        }
+        justify-content: end;
+        gap: 5%;
 
     }
 
     .bottom-right {
-        align-self: start;
-        display: grid;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
         justify-content: end;
-        justify-items: end;
-        column-gap: 2.5%;
-        grid-auto-flow: column;
-        grid-template-columns: 2fr 1fr 1fr;
-
-
+        gap: 5%;
         button {
-            height: 4.2vh;
-            width: 4.7vw;
+            height: 37.5%;
+            width: 15%;
             box-sizing: border-box;
             background-color: rgb(20, 150, 201);
             border-radius: 999px;
-            padding: 10px 25px;
+
         }
     }
 
     :is(.top-left, .bottom-left) {
         display: grid;
-        align-self: start;
+        align-self: stretch;
     }
 
     .top-left {
-        gap: 1%;
-        grid-template: 1fr / 1fr 20fr;
-        grid-auto-flow: column;
+        grid-template-columns: 1fr 20fr;
+        align-items: center;
+        justify-items: stretch;
+        gap: 7.5%;
+        input {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+            height: 50%;
+            border: 1px solid grey;
+            border-radius: 25px;
+            padding: 2px 23px 2px 30px;
+            background-color:rgb(169 169 169 / 25%);
+            &:hover, &:focus {
+                box-shadow: rgba(37, 236, 34, 0.24) -3px 3px 10px 0px;
+            }
+        }
     }
 
     .bottom-left{
         row-gap: 5%;
         column-gap: 7.5px;
-        grid-area: 1fr 2fr / 1fr 5fr;
+        grid-template: 1fr 2fr / 1fr 7fr;
         justify-items: start;
         .avatar-L {
+            margin-left: 3px;
+            align-self: center;
+            justify-self: start;
             grid-area: 1 / 1 / 3 / 2;
         }
         p:nth-child(2) {
-            font-size: 0.5rem;
+            margin:0;
+            align-self: end;
+            font-size: 1rem;
             &+p{
+                margin:0;
+                align-self: start;
                 font-size: 1.5rem;
             }
         }
