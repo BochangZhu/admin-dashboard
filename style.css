@@ -133,7 +133,33 @@ svg {
             }
         }
     }
+}
 
+.main {
+    display: grid;
+    padding: 2%;
+    grid-template-columns: 1fr / 7fr 3fr;
+    .left-main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5%;
+        .modules {
+            display: grid;
+            gap: 5%;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            &>div {
+                padding: 5%;
+                display: grid;
+                p {
+                    place-self: start;
+                }
+                .icons{
+                    justify-self: end;
+                }
 
+            }
+        }
+    }
+    
 }
 
