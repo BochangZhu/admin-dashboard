@@ -1,11 +1,17 @@
+
+
 body {
     margin: 0;
     min-height: 100vh;
     border: 2px solid black;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 3fr / 1fr 3.5fr;
 }
 
+
+img {
+    border-radius: 50%;
+}
 svg {
     width: 30px;
     height: 30px;
@@ -44,24 +50,48 @@ svg {
     div {
         border: 1px solid;
     }
-    padding: 10px 20px;
+    padding: 10px 35px;
     display: grid;
+
     row-gap: 1%;
-    grid-template-columns: 6fr 4fr;
+    grid-template: 1fr 2fr / 6fr 4fr;
     align-items: center;
     
-    :is(.top-right, .bottom-right) {
-        align-self: end;
+
+    .top-right {
+        &>* {
+            border: 1px dashed red;
+        }
+        align-self: start;
+
         display: grid;
-        justify-content: end;
-        grid-auto-flow: column;
-        column-gap: 10%;
+        justify-items: end;
+        align-items: center;
+        column-gap: 5%;
+        grid-template: 1fr / 6fr 1fr 2fr;
+        p:last-child {
+            justify-self: end;
+        }
+
     }
 
     .bottom-right {
-        grid-template-columns: 1fr 1fr 1fr;
+        align-self: start;
+        display: grid;
+        justify-content: end;
+        justify-items: end;
+        column-gap: 2.5%;
+        grid-auto-flow: column;
+        grid-template-columns: 2fr 1fr 1fr;
+
+
         button {
-            padding: 2.5px 5px;
+            height: 4.2vh;
+            width: 4.7vw;
+            box-sizing: border-box;
+            background-color: rgb(20, 150, 201);
+            border-radius: 999px;
+            padding: 10px 25px;
         }
     }
 
@@ -72,7 +102,7 @@ svg {
 
     .top-left {
         gap: 1%;
-        grid-template-columns: 1fr 20fr;
+        grid-template: 1fr / 1fr 20fr;
         grid-auto-flow: column;
     }
 
