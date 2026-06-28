@@ -105,7 +105,10 @@ svg, .svg {
             box-sizing: border-box;
             background-color: rgb(20, 150, 201);
             border-radius: 999px;
-
+            transition:all 0.2 ease-in-out;
+            &:hover, &:focus {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+            }
         }
     }
 
@@ -117,17 +120,24 @@ svg, .svg {
     .top-left {
         grid-template-columns: 1fr 20fr;
         align-items: center;
-        justify-items: stretch;
-        gap: 7.5%;
+        gap: 2%;
+        label {
+            position: relative;
+            left: 100%;
+            justify-self: end;
+        }
         input {
+            justify-self: center;
+            width: 80%;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
-            height: 50%;
+            height: 70%;
             border: 1px solid grey;
             border-radius: 25px;
             padding: 2px 23px 2px 30px;
             background-color:rgb(169 169 169 / 25%);
+            transition: all 0.2s ease-in;
             &:hover, &:focus {
-                box-shadow: rgba(37, 236, 34, 0.24) -3px 3px 10px 0px;
+                box-shadow: rgba(0, 0, 0, 0.24) -2px 5px 5px;
             }
         }
     }
@@ -218,7 +228,7 @@ svg, .svg {
             flex-direction: column;
             gap: 15px;
             &>div {
-                padding: 35px;
+                padding: 27.5px;
                 border-radius: 15px;
                 background-color: white;
                 display: grid;
@@ -250,13 +260,17 @@ svg, .svg {
             flex-direction: column;
             gap: 15px;
             &>.content {
+                padding: 17.5px;
+                flex: 1;
                 background-color: white;
                 border-radius: 15px;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-evenly;
                 gap: 10px;
                 &>div {
                     display: grid;
+                    align-items: center;
                     grid-template: 1fr 1fr / 1fr 3.5fr;
                     .avatar {
                         width: 40px;
@@ -271,7 +285,8 @@ svg, .svg {
 }
 
 
-.heading, .major p, .minor p{
+.heading, .major p, .minor p, .name, input{
+
     font-weight: bold;
     font-size: 1.25rem;
 }
