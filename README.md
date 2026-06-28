@@ -1,17 +1,17 @@
 # Dashboard — The Odin Project
 
-A responsive admin dashboard UI built as a layout exercise for [The Odin Project](https://www.theodinproject.com/) curriculum. The goal is to practice **CSS Grid and Flexbox**.
+A responsive admin dashboard UI built as an exercise for [The Odin Project](https://www.theodinproject.com/) curriculum. The goal for this project is to practice **combination of CSS Grid and Flexbox**.
 
 ![Dashboard preview](./dash_preview.png)
 
 ## Structure
 
-The page is composed of four part with distinct structures:
+The page is composed of four part that solves different layout problems:
 
 - **Sidebar** — fixed-width column, full viewport height
 - **Header** — search bar, user info, and action buttons
-- **Main / Left** — a responsive grid of project cards
-- **Main / Right** — two independently scrollable panels
+- **Left-main** — a responsive grid of project cards
+- **Right-main** — two independently scrollable panels
 
 ## Layout approach: 
 
@@ -56,9 +56,9 @@ body {
 
 ### Solving the overflow problem
 
-- Cards and side panels were overflowing the *entire page* height.
+- Cards and side panels were overflowing the left/eight main sections' height.
 
-- Fix overflow containment at all nesting level.
+- Fix overflow at all nesting level.
 
 ```css
 .left-main,
